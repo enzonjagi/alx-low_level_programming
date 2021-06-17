@@ -8,8 +8,7 @@
  */
 int main(void)
 {
-char message[];
-message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-fwrite(message, sizeof(message) - 1, 1, stdout);
+char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+fwrite(msg, sizeof(msg) - 1, 1, stdout);
 return (1);
 }
