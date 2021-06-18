@@ -21,7 +21,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	x = n % 10;
+	int x = n % 10;
 	char begin[] = "Last digit of";
 
 	if (x > 5)
