@@ -19,12 +19,7 @@ int main(void)
 
 	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-	if (ch == 'e')
-	{
-	ch++;
-	putchar(ch);
-	}
-	else if (ch == 'q')
+	if (ch == 'e' && ch == 'q')
 	{
 	ch++;
 	putchar(ch);
