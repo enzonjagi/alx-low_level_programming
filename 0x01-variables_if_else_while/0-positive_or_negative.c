@@ -1,13 +1,14 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
 
-/*
+/**
  * main - assigns a random value to n each time it is executed
  * @void: the placeholder for empty parameters
  *
- * Description: The main function assigns a random value on each execution
+ * description:
+ *    main(void); --> 0
+ * The main function assigns a random value on each execution
  * then checks to see if n is greater than 0 prints it is positive
  * else if n is equal to 0 it prints is zero
  * else it prints is negative
