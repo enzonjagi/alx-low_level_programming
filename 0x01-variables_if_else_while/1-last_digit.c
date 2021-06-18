@@ -21,11 +21,14 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	if ((n % 10) > 5)
-	printf("Last digit of %lu is greater than 5", (long int)n);
-	else if ((n % 10) == 0)
-	printf("Last digit of %lu is 0", (long int)n);
-	else if (((n % 10) < 6) && ((n % 10) != 0))
-	printf("Last digit of %lu is less than 6 and not 0", (long int)n);
+	x = n % 10;
+	char begin[] = "Last digit of";
+
+	if (x > 5)
+	printf("%c %lu is %d and is greater than 5", begin, (long int)n, x);
+	else if (x == 0)
+	printf("%c %lu is %d and is 0", begin, (long int)n, x);
+	else if ((x < 6) && (x != 0))
+	printf("%c %lu is %d and is less than 6 and not 0", begin, (long int)n, x);
 	return (0);
 }
