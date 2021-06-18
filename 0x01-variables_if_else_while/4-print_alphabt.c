@@ -22,10 +22,12 @@ int main(void)
 	if (ch == 'e')
 	{
 	ch++;
+	putchar(ch);
 	}
 	else if (ch == 'q')
 	{
 	ch++;
+	putchar(ch);
 	}
 	else
 	{
