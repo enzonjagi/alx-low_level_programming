@@ -1,5 +1,5 @@
-#include "_putchar.c"
-int _putchar(char c);
+#include "holberton.h"
+
 /**
  * main - this function prints out 'Holberton' to stdout
  * @void: placeholder for the parameters required
