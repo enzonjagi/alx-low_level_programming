@@ -14,34 +14,35 @@
 
 void times_table(void)
 {
-int i = 0;
-int n = '\n';
-int times = 0;
-int com = ',';
-int space = ' ';
+int i, j, times, ten, one;
 
-while (i < 10)
+for (i = 0; i <= 9; i++)
 {
-int j = 0;
-
-/*_putchar((i / 10) + '0');_putchar((i % 10) + '0');*/
-
-while (j < 10)
+for (j = 0; j <= 9; j++)
 {
-
 times = i * j;
+ten = times / 10;
+one = times % 10;
 
-_putchar((times / 10) + '0');
-_putchar((times % 10) + '0');
-_putchar(com);
-_putchar(space);
-
-j++;
-
+if (j == 0)
+{
+_putchar('0');
 }
-_putchar((times / 10) + '0');
-_putchar((times % 10) + '0');
-_putchar(n);
-i++;
+else if (times < 10)
+{
+_putchar(',');
+_putchar(' ');
+_putchar(' ');
+_putchar(one + '0');
+}
+else
+{
+_putchar(',');
+_putchar(' ');
+_putchar(ten + '0');
+_putchar(one + '0');
+}
+}
+_putchar('\n');
 }
 }
