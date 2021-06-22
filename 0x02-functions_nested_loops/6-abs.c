@@ -2,7 +2,7 @@
 
 /**
  * _abs - this function gives the abs value of a number
- * @int: the integer value it receives
+ * @c: the integer value it receives
  *
  * description:
  * _abs()
