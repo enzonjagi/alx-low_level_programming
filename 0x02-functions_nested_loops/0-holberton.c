@@ -14,7 +14,7 @@
 
 int main(void)
 {
-char str[] = "Holberton";
+char str[] = "Holberton\n";
 int i = 0;
 
 while (str[i] != '\0')
