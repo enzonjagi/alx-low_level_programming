@@ -10,13 +10,27 @@
 
 void rev_string(char *s)
 {
-	int len, i;
+	int len = 0, i, n;
+	char tmp;
 
-	len = strlen(s);
 
-	for (i = (len - 1); i >= 0; i--)
+	/*check length of string*/
+	while (*s != 0)
 	{
-		_putchar(*(s + i));
+		len++;
+		s++;
 	}
-	_putchar('\n');
+
+	s = s - len;
+	n = len - 1; /*assign n the last value of the string*/
+
+	/*assign i the values between first index and the first half*/
+	/*swap the values of the two halfs*/
+	for (i = 0; i < len / 2; i++)
+	{
+		tmp = *(s + i);
+		*(s + i) = *(s + n);
+		*(s + n) = tmp;
+		n--;
+	}
 }
