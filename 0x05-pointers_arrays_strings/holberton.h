@@ -10,5 +10,6 @@ void rev_string(char *s);
 void print_array(int *a, int n);
 void puts_half(char *str);
 void puts2(char *str);
+char *_strcpy(char *dest, char *src);
 
 #endif /* HOLBERTON_H */
