@@ -12,14 +12,18 @@
 char *_strcpy(char *dest, char *src)
 {
 	char temp;
+
 	int i, length;
 
 	length = strlen(src);
 
 	for (i = 0; i < length; i++)
 	{
-		temp = *(src + i);
-		*(dest + i) = temp;
+		if (*src != '\0')
+		{
+			temp = *(src + i);
+			*(dest + i) = temp;
+		}
 	}
 	return (dest);
 }
