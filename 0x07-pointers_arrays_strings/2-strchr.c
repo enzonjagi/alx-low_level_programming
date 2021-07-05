@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stddef.h>
+
 
 /**
  * _strchr - returns pointer to the first occurrence of c in s
@@ -11,15 +11,14 @@
 
 char *_strchr(char *s, char c)
 {
-	char *p = s;
+	int i;
 
-	while (*p != '\0')
+	for (i = 0; s[i] >= '\0'; i++)
 	{
-		if (*p == c)
+		if (s[i] == c)
 		{
-			return (p);
+			return (s + i);
 		}
-		p++;
 	}
-	return (NULL);
+	return ('\0');
 }
