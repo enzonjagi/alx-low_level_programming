@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 			if (!(isdigit(argv[j][i])))
 			{
 				printf("Error\n");
-				return (0);
+				return (1);
 			}
 		}
 		add = add + atoi(argv[j]);
