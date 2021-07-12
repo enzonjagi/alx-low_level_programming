@@ -18,7 +18,10 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			mul = mul * atoi(argv[i]);
+			if (atoi(argv[i]) / atoi(argv[i]) == 1)
+				mul = mul * atoi(argv[i]);
+			else
+				break;
 		}
 		printf("%d\n", mul);
 		exit(EXIT_SUCCESS);
