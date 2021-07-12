@@ -11,8 +11,11 @@
 
 int main(int argc, char *argv[])
 {
+	int args_toPr;
+
+	args_toPr = argc - 1;
 	UNUSED(argv);
-	printf("%d\n", argc);
+	printf("%d\n", args_toPr);
 
 	return (0);
 }
