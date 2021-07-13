@@ -20,9 +20,15 @@ char *str_concat(char *s1, char *s2)
 	new = (char *)malloc(sizeof(char) * (len + 1));
 	if (new == NULL)
 		return (NULL);
-	strcat(new, s1);
-	strcat(new, s2);
-	/*strcat(new, nullc);*/
+	if (s1 == NULL)
+		 strcat(new, s2);
+	else if (s2 == NULL)
+		strcat(new, s1);
+	else
+	{
+		strcat(new, s1);
+		strcat(new, s2);
+	}
 
 	return (new);
 }
