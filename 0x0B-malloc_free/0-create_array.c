@@ -13,7 +13,7 @@
 
 char *create_array(unsigned int size, char c)
 {
-	char *ptr;
+	char *ptr, *check;
 	unsigned int i;
 
 	if (size == 0)
@@ -23,6 +23,8 @@ char *create_array(unsigned int size, char c)
 	{
 		ptr[i] = c;
 	}
+	check = ptr;
+	if (check == NULL)
+		return (NULL);
 	return (ptr);
-	free(ptr);
 }
