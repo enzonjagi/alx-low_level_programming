@@ -1,6 +1,7 @@
 #include "holberton.h"
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * create_array - creates an array and initializes it with a char
@@ -22,7 +23,10 @@ char *create_array(unsigned int size, char c)
 	{
 		ptr[i] = c;
 	}
-
+	/*
+	 *if (ptr[0] == '\0')
+	 *	fprintf(stderr, "Mem issue\n");
+	 */
 	return (ptr);
 	free(ptr);
 }
