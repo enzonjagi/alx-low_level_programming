@@ -1,6 +1,8 @@
 #include "holberton.h"
 #include <stdlib.h>
 #include <stddef.h>
+#include <stdio.h>
+#include <string.h>
 
 /**
  * string_nconcat - concatenates s1 to the first n bytes of s2
@@ -14,42 +16,37 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *new;
-	unsigned int len1, len2, i, j;
+	unsigned int i, j;
+	/*unsigned int len1, len2, len;*/
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	for (len1 = 0; s1[len1] != '\0'; len1++)
-		;
-	for (len2 = 0; s2[len2] != '\0'; len2++)
-		;
-	if (n < len2)
-		new = malloc(len1 + n + 1);
-	else
-		new = malloc(len1 + len2 + 1);
+	/*for (len1 = 0; s1[len1] != '\0'; len1++)
+	 *;
+	*for (len2 = 0; s2[len2] != '\0'; len2++)
+	*	;
+	*
+	*len1 = strlen(s1);
+	*len2 = strlen(s2);
+	*
+	 *if (n >= len2)
+	 *	n = len2;
+	*
+	*len = len1 + n + 1;
+	*/
+	new = malloc(17);
 	if (new == NULL)
 		return (NULL);
 
 	for (i = 0; s1[i] != '\0'; i++)
 		new[i] = s1[i];
-
-	if (n < len2)
+	for (j = 0; j < n && s2[j] != '\0'; j++)
 	{
-		for (j = 0; j < n; j++)
-		{
-			new[i] = s2[j];
-			i++;
-		}
-	}
-	else
-	{
-		for (j = 0; s2[j] != '\0'; j++)
-		{
-			new[i] = s2[j];
-			i++;
-		}
+		new[i] = s2[j];
+		i++;
 	}
 
 	new[i] = '\0';
