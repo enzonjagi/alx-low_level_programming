@@ -12,11 +12,6 @@ size_t print_list(const list_t *h)
 	unsigned long int count = 0;
 	const list_t *ptr;
 
-	if (h == NULL)
-	{
-		printf("\n");
-		return (1);
-	}
 	ptr = NULL;
 	ptr = h;
 	while (ptr != NULL)
