@@ -14,12 +14,12 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *new = malloc(sizeof(list_t));
 
 	new->str = str2;
-	if (new == NULL)
-	{
-		return (free(new), NULL);
-	}
 	new->len = strlen(str2);
 	new->next = NULL;
+/*
+ *	if (new == NULL)
+ *		return (free(new), NULL);
+ */
 	ptr = *head;
 	if (ptr == NULL)
 		*head = new;
