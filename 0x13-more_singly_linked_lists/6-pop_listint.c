@@ -13,6 +13,8 @@ int pop_listint(listint_t **head)
 	if (head == NULL)
 		return (0);
 	ptr = *head;
+	if (ptr == NULL)
+		return (0);
 	/*Point to head node and move to next node*/
 	data = ptr->n;
 	temp = *head;
