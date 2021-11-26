@@ -9,9 +9,9 @@ all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 	$(CC) $(OBJ) -o holberton
 clean:
-	$(RM) %.~ $(NAME)
+	$(RM) %~ $(NAME)
 oclean:
 	$(RM) $(OBJ)
 fclean: clean oclean
-	$(RM) %.~ $(NAME) $(OBJ)
+	$(RM) %~ $(NAME) $(OBJ)
 re: oclean all
